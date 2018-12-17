@@ -1,5 +1,4 @@
 # release-maven-example
-# release-maven-example
 
 Add some config in your file pom.xml 
 
@@ -25,8 +24,9 @@ Run command
 
 This will 
 - update your pom.xml release numbers and make a new tag for the release.
+
  
-     mvn release:perform
+    mvn release:perform
      
 This will:
 - Run tests
