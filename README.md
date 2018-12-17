@@ -27,6 +27,7 @@ This will
 
  
     mvn release:perform
+ 
      
 This will:
 - Run tests
