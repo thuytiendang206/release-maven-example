@@ -18,6 +18,23 @@ Ex:
        <tag>@{project.version}</tag>
     </scm>
     
+    
+Add configuration for pom.xml
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <goals>pre-integration-test</goals>
+          <preparationGoals>package</preparationGoals>
+          <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+          <tagNameFormat>@{project.version}</tagNameFormat>
+          <remoteTagging>false</remoteTagging>
+        </configuration>
+    </plugin>
+    
+
 Run command
 
     mvn release:prepare
@@ -25,6 +42,7 @@ Run command
 This will 
 - update your pom.xml release numbers and make a new tag for the release.
 
+Run command
  
     mvn release:perform
  
